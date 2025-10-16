@@ -1,0 +1,37 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#survey {
+    width: 500px;
+}
+
+fieldset {
+    border: 2px solid #717171;
+    border-radius: 8px;
+    padding: 20px;
+}
+
+legend {
+    text-align: center;
+    font-weight: bold;
+}
+
+input {
+    border: 1.5px solid black;
+    border-radius: 5px;
+}
+
+#btn {
+    background-color: #e376c6;
+}
+
+#btn:hover {
+    background-color: lightgreen;
+}
