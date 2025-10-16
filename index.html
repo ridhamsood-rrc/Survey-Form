@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="survey" action="https://httpbin.org/post" method="POST">
+        <h1>Survey</h1>
+        <label for="username"></label>
+        <input type="text" id="username" placeholder="Username:"><br>
+        <span id="userNameError" class="error-message" aria-live="polite"></span><br><br>
+
+        <fieldset id="ques1">
+            <legend>Are you studying currently?</legend>
+            <input type="radio" id="check" name="study">          
+            <label for="check">Yes</label><br>
+            <input type="radio" id="check2" name="study">
+            <label for="check2">No</label><br>
+        </fieldset>
+        <span id="userNameError4" class="error-message" aria-live="polite"></span><br><br>
+        
+        <fieldset id="ques2">
+            <legend>What government do you have? </legend>
+            <input type="checkbox" id="check" name="id">            
+            <label for="check">Study Permit</label><br>
+            <input type="checkbox" id="check2" name="id">
+            <label for="check2">Driver's License</label><br>
+            <input type="checkbox" id="check3" name="id">
+            <label for="check3">Passport</label>
+        </fieldset>
+        <span id="userNameError6" class="error-message" aria-live="polite"></span>
+        <br><br>
+
+        <select id="dropdown">
+            <option value="">Please select one city</option>
+            <option>Winnipeg</option>
+            <option>Winkler</option>
+            <option>Selkirk</option>
+        </select><br>
+        <span id="userNameError1" class="error-message" aria-live="polite"></span><br><br>
+
+        <label for="email"></label>
+        <input type="email" id="email" placeholder="Email Address:"><br>
+        <span id="userNameError2" class="error-message" aria-live="polite"></span><br><br>
+        <label for="phone"></label>
+        <input type="text" id="phone" placeholder="Phone Number:"><br>
+        <span id="userNameError3" class="error-message" aria-live="polite"></span><br><br>
+
+        <input id="btn" type="submit"></input>
+
+    </form>
+    
+    <script src="script.js"></script>
+</body>
+</html>
