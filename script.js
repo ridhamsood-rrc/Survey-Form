@@ -79,3 +79,22 @@ function hasSelectedOption() {
         error.textContent = "Choose at least one option!"
     }
 }
+
+function isSelected() {
+
+    const option = document.getElementById("dropdown")
+    const error = document.getElementById("userNameError1")
+
+    if (option.value === "") {
+        error.textContent = "Select one option from dropdown box!"
+    }
+
+}
+
+const clearErrors = () => {
+	const errorMessages = document.querySelectorAll(".error-message");
+	errorMessages.forEach((errorField) => {
+		errorField.textContent = "";
+		errorField.classList.remove("error-visible");
+	});
+};
