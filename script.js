@@ -86,6 +86,9 @@ function hasSelectedOption() {
 
     const check = document.getElementsByName("id")
     const error = document.getElementById("userNameError6")
+    const date = document.getElementById("date")
+    const selected_date = new Date(date.value)
+    const today = new Date()
 
     let select = false;
 
@@ -98,6 +101,10 @@ function hasSelectedOption() {
 
     if (!select) {
         error.textContent = "Choose at least one option!"
+    } else if (!date.value) {
+        error.textContent = "Please select expiry date!"
+    } else if (selected_date < today) {
+    error.textContent = "Date has to be in the future.";
     } else {
         return true
     }
