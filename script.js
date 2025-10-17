@@ -7,6 +7,10 @@ form.addEventListener("submit", function (event) {
     clearErrors()
     isNotEmpty()
     isValidEmail()
+    isValidPhone()
+    isSelected()
+    hasCheckedOption()
+    hasSelectedOption()
 })
 
 function isNotEmpty() {
@@ -24,10 +28,12 @@ function isValidEmail() {
 
     const email = document.getElementById("email").value.trim()
     const error = document.getElementById("userNameError2")
-    
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (email === "") {
         error.textContent = "Email must be filled!"
+    } else if (!emailPattern.test(email)) {
+        error.textContent = "Enter valid Email Address!"
     }
 
 }
@@ -36,9 +42,12 @@ function isValidPhone() {
 
     const phone = document.getElementById("phone").value
     const error = document.getElementById("userNameError3")
+    const phonePattern = /^\d{10}$/;
 
     if (phone === "") {
         error.textContent = "Phone Number is required!"
+    } else if (!phonePattern.test(phone)) {
+        error.textContent = "Enter valid Phone Number!"
     }
 }
 
