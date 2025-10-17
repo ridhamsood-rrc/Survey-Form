@@ -35,3 +35,9 @@ input {
 #btn:hover {
     background-color: lightgreen;
 }
+
+.error-message {
+    color: red;
+    font-family: cursive;
+    font-style: italic;
+}
