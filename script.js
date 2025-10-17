@@ -5,13 +5,18 @@ form.addEventListener("submit", function (event) {
     event.preventDefault()
 
     clearErrors()
-    isNotEmpty()
-    isValidEmail()
-    isValidPhone()
-    isSelected()
-    hasCheckedOption()
-    hasSelectedOption()
-})
+
+    const validName = isNotEmpty();
+    const validEmail = isValidEmail();
+    const validPhone = isValidPhone();
+    const validSelect = isSelected();
+    const validCheckbox = hasCheckedOption();
+    const validRadio = hasSelectedOption();
+
+    if (validName && validEmail && validPhone && validSelect && validCheckbox && validRadio) {
+        form.submit()
+  }
+});
 
 function isNotEmpty() {
 
@@ -20,8 +25,9 @@ function isNotEmpty() {
     
     if (name === "") {
         error.textContent = "Username is required!"
+    } else {
+        return true
     }
-
 }
 
 function isValidEmail() {
@@ -34,6 +40,8 @@ function isValidEmail() {
         error.textContent = "Email must be filled!"
     } else if (!emailPattern.test(email)) {
         error.textContent = "Enter valid Email Address!"
+    }  else {
+        return true
     }
 
 }
@@ -48,6 +56,8 @@ function isValidPhone() {
         error.textContent = "Phone Number is required!"
     } else if (!phonePattern.test(phone)) {
         error.textContent = "Enter valid Phone Number!"
+    } else {
+        return true
     }
 }
 
@@ -67,6 +77,8 @@ function hasCheckedOption() {
 
     if (!select) {
         error.textContent = "Choose one option!"
+    } else {
+        return true
     }
 }
 
@@ -86,6 +98,8 @@ function hasSelectedOption() {
 
     if (!select) {
         error.textContent = "Choose at least one option!"
+    } else {
+        return true
     }
 }
 
@@ -96,6 +110,8 @@ function isSelected() {
 
     if (option.value === "") {
         error.textContent = "Select one option from dropdown box!"
+    } else {
+        return true
     }
 
 }
