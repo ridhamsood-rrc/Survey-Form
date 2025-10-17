@@ -10,6 +10,12 @@ body {
 
 #survey {
     width: 500px;
+    padding-top: 10px;
+}
+
+h1 {
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 fieldset {
