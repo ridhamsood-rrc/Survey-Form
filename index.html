@@ -9,8 +9,8 @@
 <body>
     <form id="survey" action="https://httpbin.org/post" method="POST">
         <h1>Survey</h1>
-        <label for="username"></label>
-        <input type="text" id="username" placeholder="Username:"><br>
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" placeholder="Enter username here"><br>
         <span id="userNameError" class="error-message" aria-live="polite"></span><br><br>
 
         <fieldset id="ques1">
@@ -29,11 +29,15 @@
             <input type="checkbox" id="check2" name="id">
             <label for="check2">Driver's License</label><br>
             <input type="checkbox" id="check3" name="id">
-            <label for="check3">Passport</label>
+            <label for="check3">Passport</label><br><br>
+            <label for="date">Expiry Date:</label>
+            <input type="date" id="date">
+            
         </fieldset>
         <span id="userNameError6" class="error-message" aria-live="polite"></span>
         <br><br>
 
+        <p>Select which city you are in</p>
         <select id="dropdown">
             <option value="">Please select one city</option>
             <option>Winnipeg</option>
@@ -42,11 +46,11 @@
         </select><br>
         <span id="userNameError1" class="error-message" aria-live="polite"></span><br><br>
 
-        <label for="email"></label>
-        <input type="email" id="email" placeholder="Email Address:"><br>
+        <label for="email">Email Address:</label><br>
+        <input type="email" id="email" placeholder="Enter Email Address here"><br>
         <span id="userNameError2" class="error-message" aria-live="polite"></span><br><br>
-        <label for="phone"></label>
-        <input type="text" id="phone" placeholder="Phone Number:"><br>
+        <label for="phone">Phone Number:</label><br>
+        <input type="text" id="phone" placeholder="Enter Phone Number here"><br>
         <span id="userNameError3" class="error-message" aria-live="polite"></span><br><br>
 
         <input id="btn" type="submit"></input>
